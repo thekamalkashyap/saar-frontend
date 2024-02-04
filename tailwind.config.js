@@ -7,10 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        shree: "#840808",
+        shree_txt: "#FFC208",
+        aastha: "#2F3D19",
+        aastha_txt: "#FBECD3",
+        isha: "#42ABE9",
+        isha_txt: "#FFFBF4",
+        mann: "#E97C7C",
+        mann_txt: "#F6D3B4",
+      },
+      screens: {
+        xxs: "320px",
+        xs: "380px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
   },
