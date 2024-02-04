@@ -4,6 +4,7 @@ import searchSvg from "@/public/search.svg";
 import cartSvg from "@/public/cart.svg";
 import profileSvg from "@/public/profile.svg";
 import img from "@/public/main.png";
+import Link from "next/link";
 export default () => {
   return (
     <div>
@@ -12,9 +13,9 @@ export default () => {
       </h3>
       <div className="h-screen flex justify-between items-start bg-cover bg-[url('/main.png')] p-16">
         <div className="text-mann">
-          <figure>
+          <Link href="/">
             <Image src={logo} />
-          </figure>
+          </Link>
           <nav className="mt-8">
             <ul className="flex gap-5 text-lg">
               <li>Shree</li>

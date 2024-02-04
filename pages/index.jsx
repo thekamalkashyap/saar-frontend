@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useRef } from "react";
 import { Shree, Aastha, Isha, Mann } from "@/components/Home";
 import Image from "next/image";
+import Link from "next/link";
 import img from "@/public/main.png";
 import { ProductCard as Card } from "@/components/Home";
 
@@ -34,11 +35,11 @@ export default function Home() {
       <div className="p-10 sm:p-16">
         <div className="flex items-center justify-between mb-12 text-shree">
           <h2 className="text-xl font-semibold">Our Products</h2>
-          <button>View All</button>
+          <Link href="/products">View All</Link>
         </div>
         <div className="grid grid-cols-1 gap-6 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-          {[...Array(10).keys()].map(() => (
-            <Card />
+          {[...Array(10).keys()].map((e) => (
+            <Card key={e} />
           ))}
         </div>
       </div>

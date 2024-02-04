@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shree {
+  color: #ffc208;
+  background: #840808;
+}
+
+.aastha {
+  color: #fbecd3;
+  background: #2f3d19;
+}
+.isha {
+  background: #42abe9;
+  color: #fffbf4;
+}
+
+.mann {
+  background: #e97c7c;
+  color: #f6d3b4;
+}
