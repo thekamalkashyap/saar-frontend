@@ -1,14 +1,23 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Shree, Aastha, Isha, Mann } from "@/components/Home";
 import Image from "next/image";
 import Link from "next/link";
 import img from "@/public/main.png";
 import { ProductCard as Card } from "@/components/Home";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const carouselRef = useRef();
+  const { category } = useRouter().query;
+  const categoryArr = ["shree", "aastha", "isha", "mann"];
+
+  // useEffect(() => {
+  //   if (!carouselRef.current) return;
+  //   carouselRef.current.goToSlide(categoryArr.indexOf(category));
+  // }, [category]);
+
   return (
     <div>
       <Carousel

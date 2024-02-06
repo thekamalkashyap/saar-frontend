@@ -5,7 +5,10 @@ import cartSvg from "@/public/cart.svg";
 import profileSvg from "@/public/profile.svg";
 import img from "@/public/main.png";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default () => {
+  const router = useRouter();
   return (
     <div>
       <h3 className="h-12 leading-10 text-center rounded-t-xl bg-aastha text-aastha_txt ">
@@ -18,8 +21,23 @@ export default () => {
           </Link>
           <nav className="mt-8">
             <ul className="flex gap-5 text-lg">
-              <li>Shree</li>
-              <li className="font-bold">Aastha</li>
+              <li
+                onClick={() => {
+                  router.query.category = "mann";
+                  router.push(router);
+                }}
+              >
+                Shree
+              </li>
+              <li
+                onClick={() => {
+                  router.query.category = "mann";
+                  router.push(router);
+                }}
+                className="font-bold"
+              >
+                Aastha
+              </li>
               <li>Isha</li>
               <li>Mann</li>
             </ul>

@@ -5,11 +5,12 @@ import profileSvg from "@/public/profile.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import cx from "@/utils/cx";
+import { useTheme } from "@/Context/Theme";
+
 export default () => {
+  const { theme } = useTheme();
   const router = useRouter();
-  const { category } = router.query;
   const categoryArr = ["shree", "aastha", "isha", "mann"];
-  const theme = categoryArr.includes(category) ? category : "shree";
   return (
     <>
       <h3
@@ -28,6 +29,7 @@ export default () => {
             <img
               className="w-[5rem] object-cover h-[6rem]"
               src={`/logo${theme[0]}.png`}
+              alt="logo"
             />
           </Link>
           <nav className="mt-6">
@@ -62,7 +64,7 @@ export default () => {
         </div>
         <div className="flex gap-4">
           <div className={cx("flex p-2 border-b ", "border-" + theme)}>
-            <Image src={searchSvg} />
+            <Image src={searchSvg} alt="search" />
             <input
               className={cx(
                 "w-[15rem]  text-lg px-2 bg-transparent focus:outline-none",
@@ -76,8 +78,8 @@ export default () => {
             />
           </div>
           <div className="flex gap-4 text-shree">
-            <Image src={cartSvg} />
-            <Image src={profileSvg} />
+            <Image src={cartSvg} alt="cart" />
+            <Image src={profileSvg} alt="profile " />
           </div>
         </div>
       </div>
